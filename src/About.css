@@ -1,0 +1,70 @@
+.about {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #c5d3be21; /* Tonalidade de fundo suave */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    gap: 20px;
+}
+
+.about-logo img {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.headline {
+    font-size: 2.5rem;
+    color: #3f899b;
+    margin-bottom: 15px;
+    font-weight:lighter;
+    text-transform:initial;
+    letter-spacing: 1px;
+}
+
+.description {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #838383;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* Responsividade: Em telas menores, altera o layout para coluna */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-logo img {
+        width: 120px; /* Reduz um pouco o tamanho da logo */
+        margin-bottom: 20px;
+    }
+
+    .headline {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,218 @@
+/* Home.css */
+.home {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Evita barra de rolagem horizontal */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('./assets/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* Efeito de digitação no h1 */
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    color: rgb(84, 175, 250);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid white;
+    width: 0;
+    margin: 0 auto;
+    animation: typing 6s steps(40, end) forwards, blink-caret 0.75s step-end 3 forwards;
+    /* Remover borda no fim da animação */
+    animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.cta-button {
+    background-color: #66b2ff;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #3399ff;
+}
+
+/* Seção Intro com Cards */
+.intro {
+    background-color: #f4f4f4;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.intro-content {
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: #3cadda;
+    margin-bottom: 30px;
+}
+
+.intro .subtitle {
+    font-size: 1.3rem;
+    color: #4d4c4ca9;
+    margin-bottom: 30px;
+    padding: 0 10%;
+    text-align: center;
+}
+
+/* Container de cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Card */
+.card {
+    width: 100%;
+    max-width: 320px;
+    perspective: 1000px;
+    min-height: 350px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-back {
+    background-color: #27a56a;
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    min-height: 350px;
+    backface-visibility: hidden;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+.card-text {
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    .intro .subtitle {
+        padding: 0 5%;
+    }
+}
+
+.service-points {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.point {
+    margin-right: 10px;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+}
+
+.service-points br {
+    margin-bottom: 10px;
+}
