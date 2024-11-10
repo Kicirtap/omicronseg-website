@@ -21,10 +21,10 @@ function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         emailjs.sendForm(
-            'YOUR_SERVICE_ID', // Substitua pelo seu Service ID do EmailJS
-            'YOUR_TEMPLATE_ID', // Substitua pelo seu Template ID do EmailJS
+            'service_g1dzxmf', // Service ID
+            'template_otahz0q', // Template ID
             e.target,
-            'YOUR_USER_ID' // Substitua pelo seu User ID do EmailJS
+            'k-eidKl5GrrkXh2RB' // User ID (Public Key)
         ).then((result) => {
             alert('Mensagem enviada com sucesso!');
             setFormData({ name: '', email: '', message: '' });
@@ -56,9 +56,15 @@ function Contact() {
                     <div className="contact-info-logo">
                         <img src={logo} alt="Logo da OmicronSeg" />
                     </div>
-                    <br></br>
-                    <p>Email: contato@omicronseg.com.br</p>
-                    <p>Telefone: (21) 9 9627-0083</p>
+                    <br />
+                    <p>Email: contato@omicronseg.com.br</p> {/* E-mail original de contato */}
+                    <p>Email alternativo: patrickandredasilva@gmail.com</p> {/* E-mail adicional */}
+                    <p>
+                        Telefone: (21) 9 9627-0083
+                        <a href="https://wa.me/5521996270083" target="_blank" rel="noopener noreferrer">
+                            <i className="fab fa-whatsapp" style={{ color: '#25D366', marginLeft: '10px' }}></i>
+                        </a>
+                    </p>
                     <h5>Atendimento</h5>
                     <p>Segunda a Sexta</p>
                     <p>09:00 as 18:00</p>
@@ -69,3 +75,5 @@ function Contact() {
 }
 
 export default Contact;
+
+

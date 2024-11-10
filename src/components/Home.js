@@ -9,7 +9,7 @@ function Home() {
         <div className="home">
             <section className="hero" id="home">
                 <div className="hero-text">
-                    <h1 className="typewriter">OmicronSeg</h1>
+                    <h1 className="typewriter">Omicron<span className="pipe">|</span>Seg</h1>
                     <p>Soluções inteligentes para um mundo conectado.</p>
                     <a href="#contact" className="cta-button">Mais Informações</a>
                 </div>
@@ -63,7 +63,7 @@ function Home() {
                                 <img src={alarmesImg} alt="Sistemas de Alarmes" className="card-img" />
                             </div>
                             <div className="card-back">
-                                <h5 className="card-title">Sistemas de Alarmes</h5>
+                                <h5 className="card-title">Sistemas de Alarme</h5>
                                 <p className="card-text">
                                     Os sistemas de alarme oferecem proteção personalizada, monitoramento em tempo real e uma resposta rápida a intrusões, garantindo a segurança de seu patrimônio
                                     e tranquilidade para sua família ou empresa.
