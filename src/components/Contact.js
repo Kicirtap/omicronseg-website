@@ -58,7 +58,7 @@ function Contact() {
                     </div>
                     <br />
                     <p>Email: contato@omicronseg.com.br</p> {/* E-mail original de contato */}
-                    <p>Email alternativo: patrickandredasilva@gmail.com</p> {/* E-mail adicional */}
+                   
                     <p>
                         Telefone: (21) 9 9627-0083
                         <a href="https://wa.me/5521996270083" target="_blank" rel="noopener noreferrer">
