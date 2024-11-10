@@ -7,7 +7,8 @@ function Contact() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        message: ''
+        message: '',
+        phone: '' // Adicionando o campo para telefone
     });
 
     const handleChange = (e) => {
@@ -27,7 +28,7 @@ function Contact() {
             'k-eidKl5GrrkXh2RB' // User ID (Public Key)
         ).then((result) => {
             alert('Mensagem enviada com sucesso!');
-            setFormData({ name: '', email: '', message: '' });
+            setFormData({ name: '', email: '', message: '', phone: '' }); // Resetando todos os campos
         }, (error) => {
             alert('Erro ao enviar a mensagem, tente novamente.');
         });
@@ -46,6 +47,9 @@ function Contact() {
                         <label htmlFor="email">Email</label>
                         <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
 
+                        <label htmlFor="phone">Telefone</label> {/* Adicionando campo para telefone */}
+                        <input type="text" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
+
                         <label htmlFor="message">Mensagem</label>
                         <textarea id="message" name="message" value={formData.message} onChange={handleChange} required />
 
@@ -58,7 +62,6 @@ function Contact() {
                     </div>
                     <br />
                     <p>Email: contato@omicronseg.com.br</p> {/* E-mail original de contato */}
-                   
                     <p>
                         Telefone: (21) 9 9627-0083
                         <a href="https://wa.me/5521996270083" target="_blank" rel="noopener noreferrer">
@@ -75,5 +78,3 @@ function Contact() {
 }
 
 export default Contact;
-
-
