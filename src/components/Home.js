@@ -116,7 +116,7 @@ function Home() {
 
             {/* Ícone do WhatsApp fixado no canto */}
             <div className="whatsapp-icon">
-                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/+552199627083" target="_blank" rel="noopener noreferrer">
                     <FaWhatsapp size={50} color="#25D366" />
                 </a>
             </div>
